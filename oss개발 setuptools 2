@@ -1,0 +1,15 @@
+%%writefile setup.py
+import setuptools
+
+setuptools.setup (
+    name = byoungpil
+    version = '0.0.1',
+    description = 'nice calculator',
+    author = 'parkbyoungpil',
+    url = 'https://github.com/parkbyoungpil/oss-creative',
+    download_url = 'https://github.com/parkbyoungpil/oss-creative',
+    packages = [ 'mycalc' ],
+    classifiers =[
+        "Programming Language :: Python :: 3",
+    ]
+)
