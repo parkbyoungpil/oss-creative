@@ -1,0 +1,10 @@
+!twine upload -u Parkbyoungpil -p @aksnfkmzb5q dist/byoungpil-0.0.1-py3-none-any.whl  #업로드
+
+!pip install byoungpil==0.0.1  #pypi 버전확인
+
+import mycalc
+from mycalc import calculator #8
+
+
+v = calculator.add(6, 8)
+print(v)   #9
