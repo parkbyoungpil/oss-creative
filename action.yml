@@ -6,8 +6,8 @@ inputs:
     required: true
     default: "1"
 outputs:
-  num_squared: 
-    value: ${{ steps.get-square.outputs.num_squared}}
+  num_squared:
+    value: ${{ steps.get-square.outputs.num_squared }}
 runs:
   using: 'composite'
   steps:
@@ -19,11 +19,9 @@ runs:
       run: pip install -r requirements.txt
       shell: bash
     - name: Pass inputs to Shell
-      run:
-        echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
-      shell:bash
-    -name: Fetch the number' square
-     id: get-square
-     run: python src/get_num_sqare.py
-     shell: basy
-    
+      run: echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
+      shell: bash
+    - name: Fetch the number's square
+      id: get-square
+      run: python src/get_num_square.py
+      shell: bash
